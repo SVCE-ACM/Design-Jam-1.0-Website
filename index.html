@@ -21,27 +21,56 @@
         <div class="masthead-content">
             <div class="container">
                 <h1 class="masthead-heading mb-0" style="padding-bottom: 25px;"><strong>Design Jam 1.0</strong></h1>
-                <h6 class="masthead-subheading mb-0"><strong>A Web Designing contest to test your skills&nbsp;</strong><br></h6><h6 class="time-rem">
+                <h6 class="masthead-subheading mb-0" ><strong>A Web Designing contest to test your skills&nbsp;</strong><br></h6><h6 class="time-rem">
     <strong><div id="timer"></div></strong><br />
     <script type="text/javascript">
 
-		function refreshData() {
-			    var date = new Date('2020/04/05 23:59:59');
-                var today = new Date();
-                var diff_second = Math.abs(date-today) /1000;
-                var days = Math.floor(diff_second/86400);
-                diff_second = diff_second%86400;
-                var hours = Math.floor(diff_second/3600);
-                diff_second = diff_second%3600;
-                var minutes = Math.floor(diff_second/60);
-                diff_second = diff_second%60;
-                var seconds = Math.floor(diff_second);
-                document.getElementById("timer").innerHTML ="Registration closes in "+ hours +" hours "+ minutes +" minutes ";
-			    setTimeout(refreshData, 60000);
-			}
-		refreshData(); // execute function
+    var countDownDate = new Date("May 17, 2021 12:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer").innerHTML ="Registration closes in "+ days + " days " + hours +" hours "+ minutes +" minutes " + seconds + " seconds ";
+  //document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  //+ minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+		// function refreshData() {
+		// 	    var date = new Date('2021/04/05 23:59:59');
+    //             var today = new Date();
+    //             var diff_second = Math.abs(date-today) /1000;
+    //             var days = Math.floor(diff_second/86400);
+    //             diff_second = diff_second%86400;
+    //             var hours = Math.floor(diff_second/3600);
+    //             diff_second = diff_second%3600;
+    //             var minutes = Math.floor(diff_second/60);
+    //             diff_second = diff_second%60;
+    //             var seconds = Math.floor(diff_second);
+    //             document.getElementById("timer").innerHTML ="Registration closes in "+ hours +" hours "+ minutes +" minutes ";
+		// 	    setTimeout(refreshData, 60000);
+		// 	}
+		//refreshData(); // execute function
 	</script>
-</h6><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="https://go.thekrishna.in/XeFyfq">Register now</a>
+</h6><a class="btn btn-primary btn-xl rounded-pill mt-5" style="padding-top: -75px;" role="button" href="https://go.thekrishna.in/XeFyfq">Register now</a>
                 <p class="time-rem1"><strong>Registrations closes on&nbsp;5th April 2020, 11:59 PM IST</strong><br></p>
             </div>
         </div>
