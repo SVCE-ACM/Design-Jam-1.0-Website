@@ -1,207 +1,160 @@
 <!DOCTYPE html>
 <html style="scroll-behavior: smooth">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-		/>
-		<title>Home - Design Jam 2020</title>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="600x600"
-			href="assets/img/acm_sym_1s_flat_pos.png"
-		/>
-		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- <link
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+	<title>Home - Design Jam 2020</title>
+	<link rel="icon" type="image/png" sizes="600x600" href="assets/img/acm_sym_1s_flat_pos.png" />
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	<!-- <link
 			rel="stylesheet"
 			href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
 		/> -->
-		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-		<link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
-		<link rel="stylesheet" href="assets/css/styles.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css"
-		/>
-		<style>
-			::-webkit-scrollbar-track {
-				background-color: #555;
-			}
+	<link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/fonts/ionicons.min.css" />
+	<link rel="stylesheet" href="assets/css/styles.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css" />
+	<style>
+		::-webkit-scrollbar-track {
+			background-color: #555;
+		}
 
-			::-webkit-scrollbar {
-				width: 10px;
-				border-radius: 10px;
-				background-color: #555;
-			}
+		::-webkit-scrollbar {
+			width: 10px;
+			border-radius: 10px;
+			background-color: #555;
+		}
 
-			::-webkit-scrollbar-thumb {
-				border-radius: 10px;
-				background-color: #f5f5f5;
-			}
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background-color: #f5f5f5;
+		}
 
-			.largeTitle {
-				font-family: 'Titillium Web', sans-serif;
-				font-weight: 700;
-				font-size: 50px;
-			}
+		.largeTitle {
+			font-family: 'Titillium Web', sans-serif;
+			font-weight: 700;
+			font-size: 50px;
+		}
 
-			.smallTitle {
-				font-family: 'Titillium Web', sans-serif;
-				font-weight: 700;
-				font-size: 30px;
-			}
+		.smallTitle {
+			font-family: 'Titillium Web', sans-serif;
+			font-weight: 700;
+			font-size: 30px;
+		}
 
-			.subTitle {
-				font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-					Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-					sans-serif;
-				font-size: 1rem;
-			}
+		.subTitle {
+			font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+				Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+				sans-serif;
+			font-size: 1rem;
+		}
 
-			h2.middle,
-			h2.middle1,
-			h2.middle2 {
-				position: relative;
-			}
+		h2.middle,
+		h2.middle1,
+		h2.middle2 {
+			position: relative;
+		}
 
-			h2.middle:before,
-			h2.middle1:before,
-			h2.middle2:before {
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 2.9px;
-				bottom: 0;
-				text-align: center;
-				left: 0;
-				background-image: linear-gradient(
-					113.3deg,
+		h2.middle:before,
+		h2.middle1:before,
+		h2.middle2:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2.9px;
+			bottom: 0;
+			text-align: center;
+			left: 0;
+			background-image: linear-gradient(113.3deg,
 					rgba(217, 9, 27, 1) 6.9%,
-					rgba(22, 68, 150, 1) 75%
-				);
-				visibility: hidden;
-				transform: scaleX(0);
-				transition: all 0.3s ease-in-out;
-			}
-			h2.middle1:before {
-				width: 86%;
-			}
-			h2.middle2:before {
-				width: 42%;
-			}
+					rgba(22, 68, 150, 1) 75%);
+			visibility: hidden;
+			transform: scaleX(0);
+			transition: all 0.3s ease-in-out;
+		}
 
-			h2.middle:hover:before,
-			h2.middle1:hover:before,
-			h2.middle2:hover:before {
-				visibility: visible;
-				transform: scaleX(1);
-			}
-		</style>
-		<title>Design Jam 1.0 - Home</title>
-	</head>
+		h2.middle1:before {
+			width: 86%;
+		}
 
-	<body
-		style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
-	>
-		<header
-			class="masthead text-center text-white"
-			style="background-image: url(./assets/img/topbanner.webp)"
-		>
-			<div class="masthead-content">
-				<div class="container">
-					<h1
-						class="masthead-heading mb-0"
-						style="padding-bottom: 25px"
-						data-aos="fade-up"
-					>
-						<strong
-							style="font-family: 'Titillium Web', sans-serif; font-weight: 700"
-						>
-							Design Jam 1.0
-						</strong>
-					</h1>
-					<h6 class="masthead-subheading mb-0" data-aos="fade-up">
-						<strong style="font-family: 'Rubik', sans-serif; font-weight: 500"
-							>A Web Designing contest to test your skills&nbsp;</strong
-						><br />
-					</h6>
-					<h6 class="time-rem" style="margin-top: 3rem">
-						<strong style="font-family: 'Rubik', sans-serif; font-weight: 500" >
-							Registration closes in
-							<strong style="font-size: larger;" id="timer" >
-							</strong></strong
-						><br />
-						<script type="text/javascript">
-							var countDownDate = new Date('May 17, 2021 12:59:59').getTime();
+		h2.middle2:before {
+			width: 42%;
+		}
 
-							// Update the count down every 1 second
-							var x = setInterval(function () {
-								// Get today's date and time
-								var now = new Date().getTime();
+		h2.middle:hover:before,
+		h2.middle1:hover:before,
+		h2.middle2:hover:before {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+		}
+	</style>
+	<title>Design Jam 1.0 - Home</title>
+</head>
 
-								// Find the distance between now and the count down date
-								var distance = countDownDate - now;
+<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)">
+	<header class="masthead text-center text-white" style="background-image: url(./assets/img/topbanner.webp)">
+		<div class="masthead-content">
+			<div class="container">
+				<h1 class="masthead-heading mb-0" style="padding-bottom: 25px" data-aos="fade-up">
+					<strong style="font-family: 'Titillium Web', sans-serif; font-weight: 700">
+						Design Jam 1.0
+					</strong>
+				</h1>
+				<h6 class="masthead-subheading mb-0" data-aos="fade-up">
+					<strong style="font-family: 'Rubik', sans-serif; font-weight: 500">A Web Designing contest to test your skills&nbsp;</strong><br />
+				</h6>
+				<h6 class="time-rem" style="margin-top: 3rem">
+					<strong style="font-family: 'Rubik', sans-serif; font-weight: 500">
+						Registration closes in
+						<strong style="font-size: larger;" id="timer">
+						</strong></strong><br />
+					<script type="text/javascript">
+						var countDownDate = new Date('May 17, 2021 12:59:59').getTime();
 
-								// Time calculations for days, hours, minutes and seconds
-								var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-								var hours = Math.floor(
-									(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-								);
-								var minutes = Math.floor(
-									(distance % (1000 * 60 * 60)) / (1000 * 60)
-								);
-								var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+						// Update the count down every 1 second
+						var x = setInterval(function() {
+							// Get today's date and time
+							var now = new Date().getTime();
 
-								// Display the result in the element with id="demo"
-								document.getElementById('timer').innerHTML =
+							// Find the distance between now and the count down date
+							var distance = countDownDate - now;
 
-									days +
-									' days ' +
-									hours +
-									' hours ' +
-									minutes +
-									' minutes ';
-								//document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-								//+ minutes + "m " + seconds + "s ";
+							// Time calculations for days, hours, minutes and seconds
+							var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+							var hours = Math.floor(
+								(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+							);
+							var minutes = Math.floor(
+								(distance % (1000 * 60 * 60)) / (1000 * 60)
+							);
+							var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-								// If the count down is finished, write some text
-								if (distance < 0) {
-									clearInterval(x);
-									document.getElementById('timer').innerHTML = 'EXPIRED';
-								}
-							}, 1000);
+							// Display the result in the element with id="demo"
+							document.getElementById('timer').innerHTML =
 
-							// function refreshData() {
-							// 	    var date = new Date('2021/04/05 23:59:59');
-							//             var today = new Date();
-							//             var diff_second = Math.abs(date-today) /1000;
-							//             var days = Math.floor(diff_second/86400);
-							//             diff_second = diff_second%86400;
-							//             var hours = Math.floor(diff_second/3600);
-							//             diff_second = diff_second%3600;
-							//             var minutes = Math.floor(diff_second/60);
-							//             diff_second = diff_second%60;
-							//             var seconds = Math.floor(diff_second);
-							//             document.getElementById("timer").innerHTML ="Registration closes in "+ hours +" hours "+ minutes +" minutes ";
-							// 	    setTimeout(refreshData, 60000);
-							// 	}
-							//refreshData(); // execute function
-						</script>
-					</h6>
-					<a
-						class="btn btn-primary btn-xl rounded-pill mt-5"
-						style="
+								days +
+								' days ' +
+								hours +
+								' hours ' +
+								minutes +
+								' minutes ';
+							//document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+							//+ minutes + "m " + seconds + "s ";
+
+							// If the count down is finished, write some text
+							if (distance < 0) {
+								clearInterval(x);
+								document.getElementById('timer').innerHTML = 'EXPIRED';
+							}
+						}, 1000);
+					</script>
+				</h6>
+				<a class="btn btn-primary btn-xl rounded-pill mt-5" style="
 							padding-top: -75px;
 							background-image: linear-gradient(
 								to right,
@@ -209,361 +162,259 @@
 								#79cbca 51%,
 								#77a1d3 100%
 							);
-						"
-						role="button"
-						href="https://go.thekrishna.in/XeFyfq"
-						>Register now</a
-					>
-					<p class="time-rem1">
-						<strong style="font-family: 'Rubik', sans-serif; font-weight: 500"
-							>Registrations closes on&nbsp;5th April 2020, 11:59 PM IST</strong
-						><br />
-					</p>
-				</div>
+						" role="button" href="https://go.thekrishna.in/XeFyfq"><span id="btntext">Register now</span></a>
+				<p class="time-rem1" style="padding-top: 10px">
+					<strong style="font-family: 'Rubik', sans-serif; font-weight: 500;">Registrations closes on 5th April 2020, 11:59 PM IST</strong><br />
+				</p>
 			</div>
-			<!-- <div
+		</div>
+		<!-- <div
 				class="bg-circle-1 bg-circle"
 				style="background: linear-gradient(to left, #de6161, #2657eb)"
 			></div>
 			<div class="bg-circle-2 bg-circle"></div>
 			<div class="bg-circle-3 bg-circle"></div>
 			<div class="bg-circle-4 bg-circle"></div> -->
-		</header>
-		<div class="brands">
-			<a href="#" style="margin: -27px">
-				<img src="assets/img/acm-logo.png" /><img
-					src="assets/img/svce-logo.png"
-			/></a>
+	</header>
+	<div class="brands">
+		<a href="#" style="margin: -27px">
+			<img src="assets/img/acm-logo.png" /><img src="assets/img/svce-logo.png" /></a>
+	</div>
+	<section>
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6 order-lg-2">
+					<div class="p-5">
+						<img class="rounded img-fluid" data-aos="fade" src="assets/img/02.jpg" />
+					</div>
+				</div>
+				<div class="col-lg-6 order-lg-1">
+					<div class="p-5">
+						<h2 class="display-4 middle1" data-aos="fade-up">
+							<strong class="largeTitle">About the Event&nbsp;</strong><i class="fa fa-code" style="color: #ee0979"></i><strong>&nbsp;</strong>
+						</h2>
+						<p class="subTitle" data-aos="fade-up">
+							This is a pure front-end web designing event where we will put
+							you all out of your boredom during this quarantine period and
+							engage you in a fun and exciting online designing battle.
+							Whether you are a newbie looking to get your hands dirty or an
+							expert flaunting your skills, this platform has separate
+							opportunities for everyone ranging from domain names to even
+							more exciting prizes. Based on your level, we will announce web
+							designing tasks on&nbsp;<strong>6th April 2020</strong>&nbsp;and
+							you will be required to make the submission on&nbsp;<strong>8th April 2020</strong>. You will have to host your website on&nbsp;<strong>GitHub pages</strong>&nbsp;based on which the evaluation will take place.<br />
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
-		<section>
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 order-lg-2">
-						<div class="p-5">
-							<img
-								class="rounded img-fluid"
-								data-aos="fade"
-								src="assets/img/02.jpg"
-							/>
-						</div>
+	</section>
+	<section>
+		<div class="container" style="padding-top: 0px; padding-bottom: 0px">
+			<div class="row align-items-center">
+				<div class="col-lg-6 order-lg-1">
+					<div class="p-5">
+						<img style="height: 50%; width: 170%" class="rounded img-fluid" data-aos="fade-up" src="assets/img/03.jpeg" />
 					</div>
-					<div class="col-lg-6 order-lg-1">
-						<div class="p-5">
-							<h2 class="display-4 middle1" data-aos="fade-up">
-								<strong class="largeTitle">About the Event&nbsp;</strong
-								><i class="fa fa-code" style="color: #ee0979"></i
-								><strong>&nbsp;</strong>
-							</h2>
-							<p class="subTitle" data-aos="fade-up">
-								This is a pure front-end web designing event where we will put
-								you all out of your boredom during this quarantine period and
-								engage you in a fun and exciting online designing battle.
-								Whether you are a newbie looking to get your hands dirty or an
-								expert flaunting your skills, this platform has separate
-								opportunities for everyone ranging from domain names to even
-								more exciting prizes. Based on your level, we will announce web
-								designing tasks on&nbsp;<strong>6th April 2020</strong>&nbsp;and
-								you will be required to make the submission on&nbsp;<strong
-									>8th April 2020</strong
-								>. You will have to host your website on&nbsp;<strong
-									>GitHub pages</strong
-								>&nbsp;based on which the evaluation will take place.<br />
-							</p>
-						</div>
+				</div>
+				<div class="col-lg-6 order-lg-2">
+					<div class="p-5" style="padding-top: 46px">
+						<h2 class="middle2" data-aos="fade-up">
+							<strong class="largeTitle">About Us&nbsp;</strong>
+						</h2>
+						<p class="subTitle" data-aos="fade-up">
+							We are from the SVCE-ACM student chapter. It is one of the most
+							reputed computing societies in the country and we host amazing
+							technical events for participants all over the world throughout
+							the year.
+							<a href="https://svce.acm.org/">Click here to know more about us</a>.
+						</p>
 					</div>
 				</div>
 			</div>
-		</section>
-		<section>
-			<div class="container" style="padding-top: 0px; padding-bottom: 0px">
-				<div class="row align-items-center">
-					<div class="col-lg-6 order-lg-1">
-						<div class="p-5">
-							<img
-								class="rounded img-fluid"
-								data-aos="fade-up"
-								src="assets/img/01.jpg"
-							/>
-						</div>
-					</div>
-					<div class="col-lg-6 order-lg-2">
-						<div class="p-5" style="padding-top: 46px">
-							<h2 class="middle2" data-aos="fade-up">
-								<strong class="largeTitle">About Us&nbsp;</strong>
-							</h2>
-							<p class="subTitle" data-aos="fade-up">
-								We are from the SVCE-ACM student chapter. It is one of the most
-								reputed computing societies in the country and we host amazing
-								technical events for participants all over the world throughout
-								the year.
-								<a href="https://svce.acm.org/"
-									>Click here to know more about us</a
-								>.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="article-list">
-			<div class="container">
-				<div class="intro">
-					<div class="text-center">
-						<h2
-
-							style="
+		</div>
+	</section>
+	<div class="article-list">
+		<div class="container">
+			<div class="intro">
+				<div class="text-center">
+					<h2 style="
 								margin-bottom: 40px;
 								font-family: 'Titillium Web', sans-serif;
 								font-weight: 700;
 								font-size: 30px;
-							"
-							data-aos="fade-up"
-						>
-							<strong class="largeTitle">Prizes</strong>
-						</h2>
-					</div>
-				</div>
-				<div class="row articles" style="margin-top: -76px">
-					<div class="col-sm-6 col-md-4 item">
-						<a href="#"
-							><img
-								class="img-fluid"
-								src="assets/img/domain.png"
-								data-aos="fade-right"
-						/></a>
-						<h4
-							class="text-center name display-4"
-							style="margin-top: 0px"
-							data-aos="fade-up"
-						>
-							<strong class="smallTitle">Domain Names </strong>
-						</h4>
-						<p
-							class="text-center description subTitle"
-							style="margin-top: 0px"
-							data-aos="fade-up"
-						>
-							We are giving out domain names for the first place of each tier
-							for your personal website.
-						</p>
-						<a class="action" href="#"></a>
-					</div>
-					<div class="col-sm-6 col-md-4 item">
-						<a href="#"
-							><img
-								class="img-fluid"
-								src="assets/img/coupons.png"
-								data-aos="fade-up"
-						/></a>
-						<h4
-							style="margin-top: 0px"
-							class="text-center name"
-							data-aos="fade-up"
-						>
-							<strong class="smallTitle">Coupons</strong>
-						</h4>
-						<p
-							class="text-center description subTitle"
-							style="margin-top: 0px"
-							data-aos="fade-up"
-						>
-							Runners up of each tier will receive exciting food and lifestyle
-							coupons*
-						</p>
-					</div>
-					<div class="col-sm-6 col-md-4 item">
-						<a href="#"
-							><img
-								class="img-fluid"
-								src="assets/img/intern.png"
-								data-aos="fade-left"
-						/></a>
-						<h4
-							class="text-center name"
-							style="margin-top: 0px"
-							data-aos="fade-up"
-						>
-							<strong class="smallTitle">Internship Opportunities</strong>
-						</h4>
-						<p
-							class="text-center description subTitle"
-							style="margin-top: 0px"
-							data-aos="fade-up"
-						>
-							High Quality submissions will receive Internship opportunities.*
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<section>
-			<div class="container" style="padding-top: 0px; padding-bottom: 0px">
-				<div class="row align-items-center">
-					<div class="col">
-						<div class="p-5">
-							<h2 class="display-4 middle" data-aos="fade-up">
-								<strong class="largeTitle">Rules</strong>
-							</h2>
-							<div>
-								<ol
-									style="font-size: 1.1em"
-									class="subTitle"
-									data-aos="fade-up"
-								>
-									<li>
-										&nbspYou will be developing only the front-end design of a
-										website and not the server-side<br />
-									</li>
-									<li>
-										&nbspYou can choose the tier in which you are participating
-										(Beginner, Intermediate and Advanced).<br />
-									</li>
-									<li>
-										&nbspYou will have prizes according to your tier of choice
-										and the quality of submissions.<br />
-									</li>
-									<li>
-										&nbspYou will require a GitHub account for this event.<br />
-									</li>
-									<li>
-										&nbspAll the websites you make will have to be hosted on
-										GitHub pages<br />
-									</li>
-								</ol>
-							</div>
-						</div>
-						<div class="p-5">
-							<h2
-								class="display-4 middle"
-								style="font-size: 50px"
-								data-aos="fade-up"
-							>
-								<strong class="largeTitle">FAQ</strong>
-							</h2>
-							<div>
-								<h3 class="display-4 question" data-aos="fade-up">
-									<strong class="smallTitle"
-										>I'm a newbie to web designing, can I participate?</strong
-									>
-								</h3>
-								<p class="subTitle" data-aos="fade-up">
-									Yes, you can. Even if you just started learning the basics of
-									front-end designing, you can take part in this challenge and
-									you will be judged only amongst the people of your caliber and
-									can win exciting prizes in the process.
-								</p>
-							</div>
-							<div data-aos="fade-up">
-								<h3 class="display-4 question">
-									<strong class="smallTitle"
-										>Will I receive any Certicicates?</strong
-									>
-								</h3>
-								<p class="subTitle">
-									All Winners and Participant will receive an Appreciation
-									certificate and Participation certificate respectively :)<br />
-								</p>
-							</div>
-							<div data-aos="fade-up">
-								<h3 class="display-4 question">
-									<strong class="smallTitle"
-										>How long is the competition for?</strong
-									>
-								</h3>
-								<p class="subTitle">
-									Once the theme of the competition has been announced, you will
-									have upto 2 days to make your submission.
-								</p>
-							</div>
-							<div data-aos="fade-up">
-								<h3 class="display-4 question">
-									<strong class="smallTitle"
-										>Can I use online resources?</strong
-									>
-								</h3>
-								<p class="subTitle">
-									Google and StackOverflow are our apples&nbsp;<i
-										class="fa fa-heart"
-										style="color: #ff0266"
-									></i
-									>&nbsp; You are free to use online guides and learning
-									resources during the process. You can also use some elements
-									of your website from pre-made sources like bootstrap. In the
-									end, it is absolutely necessary that the entire design is from
-									your own creativity. Any resemblance to existing pages from
-									the internet will lead to disqualification.
-								</p>
-							</div data-aos="fade-up">
-							<div data-aos="fade-up">
-								<h3 class="display-4 question">
-									<strong class="smallTitle"
-										>Where will my project be judged?</strong
-									>
-								</h3>
-								<p class="subTitle">
-									Your project will have to be hosted on your GitHub pages. We
-									will use that link to go through your project and then judge
-									it. If you are new to GitHub you can use this
-									<a href="https://pages.github.com/">link to know more</a>.
-								</p>
-							</div>
-							<div data-aos="fade-up">
-								<h3 class="display-4 question">
-									<strong class="smallTitle">Who can participate?</strong>
-								</h3>
-								<p class="subTitle">
-									We are open to anyone 16 years or older who has a valid
-									college ID card and is interested in working on creating fun,
-									cutting edge designs.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<div class="map-clean">
-			<div class="container">
-				<div class="intro" style="margin-bottom: 25px">
-					<h2 class="text-center display-4 middle"
-					data-aos="fade-up">
-						<strong class="largeTitle">Location</strong>
+							" data-aos="fade-up">
+						<strong class="largeTitle">Prizes</strong>
 					</h2>
-					<p class="text-center subTitle"
-					data-aos="fade-up">
-						Sri Venkateswara College of Engineering (SVCE), Sriperumbudur, Tamil
-						Nadu<br />
+				</div>
+			</div>
+			<div class="row articles" style="margin-top: -76px">
+				<div class="col-sm-6 col-md-4 item">
+					<a href="#"><img class="img-fluid" src="assets/img/domain.png" data-aos="fade-right" /></a>
+					<h4 class="text-center name display-4" style="margin-top: 0px" data-aos="fade-up">
+						<strong class="smallTitle">Domain Names </strong>
+					</h4>
+					<p class="text-center description subTitle" style="margin-top: 0px" data-aos="fade-up">
+						We are giving out domain names for the first place of each tier
+						for your personal website.
+					</p>
+					<a class="action" href="#"></a>
+				</div>
+				<div class="col-sm-6 col-md-4 item">
+					<a href="#"><img class="img-fluid" src="assets/img/cash.png" data-aos="fade-up" /></a>
+					<h4 style="margin-top: 0px" class="text-center name" data-aos="fade-up">
+						<strong class="smallTitle">Cash Prizes</strong>
+					</h4>
+					<p class="text-center description subTitle" style="margin-top: 0px" data-aos="fade-up">
+						Runners up of each tier will receive exciting food and lifestyle
+						coupons*
+					</p>
+				</div>
+				<div class="col-sm-6 col-md-4 item">
+					<a href="#"><img class="img-fluid" src="assets/img/intern.png" data-aos="fade-left" /></a>
+					<h4 class="text-center name" style="margin-top: 0px" data-aos="fade-up">
+						<strong class="smallTitle">Internship Opportunities</strong>
+					</h4>
+					<p class="text-center description subTitle" style="margin-top: 0px" data-aos="fade-up">
+						High Quality submissions will receive Internship opportunities.*
 					</p>
 				</div>
 			</div>
-			<iframe
-				allowfullscreen=""
-				frameborder="0"
-				src="https://maps.google.com/maps?q=Sri%20Venkateswara%20College%20of%20Engineering%20(SVCE)%20Post%20Bag%20No.1%2C%20Pennalur%20Village%2C%20Chennai%20-%20Bengaluru%20High%20Road%2C%20Taluk%2C%20Sriperumbudur%2C%20Tamil%20Nadu%20602117&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-				width="100%"
-				height="450"
-			></iframe>
-			<p class="text-center tc subTitle">
-				* Coupons and Internship maybe subject to the availability in your
-				region<br />
-			</p>
 		</div>
-		<div class="social-icons" style="padding-bottom: 35px; padding-top: 35px">
-			<a href="https://www.instagram.com/svceacm/"
-				><i class="icon ion-social-instagram"></i></a
-			><a href="https://github.com/SVCE-ACM"
-				><i class="icon ion-social-github"></i></a
-			><a href="https://twitter.com/acm_svce"></a
-			><a href="https://www.facebook.com/SVCEACM/"
-				><i class="icon ion-social-facebook"></i
-			></a>
-			<a href="https://www.youtube.com/channel/UC4TPMqj-kR7DdpNB1ndREMg"
-				><i class="icon ion-social-youtube"></i
-			></a>
+	</div>
+	<section>
+		<div class="container" style="padding-top: 0px; padding-bottom: 0px">
+			<div class="row align-items-center">
+				<div class="col">
+					<div class="p-5">
+						<h2 class="display-4 middle" data-aos="fade-up">
+							<strong class="largeTitle">Rules</strong>
+						</h2>
+						<div>
+							<ol style="font-size: 1.1em" class="subTitle" data-aos="fade-up">
+								<li>
+									&nbspYou will be developing only the front-end design of a
+									website and not the server-side<br />
+								</li>
+								<li>
+									&nbspYou can choose the tier in which you are participating
+									(Beginner, Intermediate and Advanced).<br />
+								</li>
+								<li>
+									&nbspYou will have prizes according to your tier of choice
+									and the quality of submissions.<br />
+								</li>
+								<li>
+									&nbspYou will require a GitHub account for this event.<br />
+								</li>
+								<li>
+									&nbspAll the websites you make will have to be hosted on
+									GitHub pages<br />
+								</li>
+							</ol>
+						</div>
+					</div>
+					<div class="p-5">
+						<h2 class="display-4 middle" style="font-size: 50px" data-aos="fade-up">
+							<strong class="largeTitle">FAQ</strong>
+						</h2>
+						<div>
+							<h3 class="display-4 question" data-aos="fade-up">
+								<strong class="smallTitle">I'm a newbie to web designing, can I participate?</strong>
+							</h3>
+							<p class="subTitle" data-aos="fade-up">
+								Yes, you can. Even if you just started learning the basics of
+								front-end designing, you can take part in this challenge and
+								you will be judged only amongst the people of your caliber and
+								can win exciting prizes in the process.
+							</p>
+						</div>
+						<div data-aos="fade-up">
+							<h3 class="display-4 question">
+								<strong class="smallTitle">Will I receive any Certicicates?</strong>
+							</h3>
+							<p class="subTitle">
+								All Winners and Participant will receive an Appreciation
+								certificate and Participation certificate respectively :)<br />
+							</p>
+						</div>
+						<div data-aos="fade-up">
+							<h3 class="display-4 question">
+								<strong class="smallTitle">How long is the competition for?</strong>
+							</h3>
+							<p class="subTitle">
+								Once the theme of the competition has been announced, you will
+								have upto 2 days to make your submission.
+							</p>
+						</div>
+						<div data-aos="fade-up">
+							<h3 class="display-4 question">
+								<strong class="smallTitle">Can I use online resources?</strong>
+							</h3>
+							<p class="subTitle">
+								Google and StackOverflow are our apples&nbsp;<i class="fa fa-heart" style="color: #ff0266"></i>&nbsp; You are free to use online guides and learning
+								resources during the process. You can also use some elements
+								of your website from pre-made sources like bootstrap. In the
+								end, it is absolutely necessary that the entire design is from
+								your own creativity. Any resemblance to existing pages from
+								the internet will lead to disqualification.
+							</p>
+						</div data-aos="fade-up">
+						<div data-aos="fade-up">
+							<h3 class="display-4 question">
+								<strong class="smallTitle">Where will my project be judged?</strong>
+							</h3>
+							<p class="subTitle">
+								Your project will have to be hosted on your GitHub pages. We
+								will use that link to go through your project and then judge
+								it. If you are new to GitHub you can use this
+								<a href="https://pages.github.com/">link to know more</a>.
+							</p>
+						</div>
+						<div data-aos="fade-up">
+							<h3 class="display-4 question">
+								<strong class="smallTitle">Who can participate?</strong>
+							</h3>
+							<p class="subTitle">
+								We are open to anyone 16 years or older who has a valid
+								college ID card and is interested in working on creating fun,
+								cutting edge designs.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
-		<script src="assets/js/script.min.js"></script>
-	</body>
+	</section>
+	<div class="map-clean">
+		<div class="container">
+			<div class="intro" style="margin-bottom: 25px">
+				<h2 class="text-center display-4 middle" data-aos="fade-up">
+					<strong class="largeTitle">Location</strong>
+				</h2>
+				<p class="text-center subTitle" data-aos="fade-up">
+					Sri Venkateswara College of Engineering (SVCE), Sriperumbudur, Tamil
+					Nadu<br />
+				</p>
+			</div>
+		</div>
+		<iframe allowfullscreen="" frameborder="0"
+			src="https://maps.google.com/maps?q=Sri%20Venkateswara%20College%20of%20Engineering%20(SVCE)%20Post%20Bag%20No.1%2C%20Pennalur%20Village%2C%20Chennai%20-%20Bengaluru%20High%20Road%2C%20Taluk%2C%20Sriperumbudur%2C%20Tamil%20Nadu%20602117&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+			width="100%" height="450"></iframe>
+		<p class="text-center tc subTitle">
+			* Coupons and Internship maybe subject to the availability in your
+			region<br />
+		</p>
+	</div>
+	<div class="social-icons" style="padding-bottom: 35px; padding-top: 35px">
+		<a href="https://www.instagram.com/svceacm/"><i class="icon ion-social-instagram"></i></a><a href="https://github.com/SVCE-ACM"><i class="icon ion-social-github"></i></a><a href="https://twitter.com/acm_svce"></a><a
+			href="https://www.facebook.com/SVCEACM/"><i class="icon ion-social-facebook"></i></a>
+		<a href="https://www.youtube.com/channel/UC4TPMqj-kR7DdpNB1ndREMg"><i class="icon ion-social-youtube"></i></a>
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+	<script src="assets/js/script.min.js"></script>
+</body>
+
 </html>
