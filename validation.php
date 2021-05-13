@@ -1,4 +1,4 @@
-<?php 
+<?php
     $PostUname = $_POST["username"];
     function remoteFileExists($url) {
         $curl = curl_init($url);
@@ -10,9 +10,9 @@
         //if request did not fail
         if ($result !== false) {
             //if request was ok, check response code
-            $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);  
+            $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
             if ($statusCode == 200) {
-                $ret = true;   
+                $ret = true;
             }
     }
     curl_close($curl);
@@ -31,11 +31,11 @@
        CURLOPT_RETURNTRANSFER => 1
    ]);
     $json = curl_exec($ch);
-    curl_close($ch);    
+    curl_close($ch);
     $jsa = json_decode($json, true);
     try {
         if(isset($jsa['message'])){
-            // throw exception if username doesn't exist if "message" json obj exist 
+            // throw exception if username doesn't exist if "message" json obj exist
             throw new Exception();
         }
         $flag = "true";
@@ -45,7 +45,7 @@
 
         /* Check for website */
         $e1 = remoteFileExists("https://".$PostUname.".github.io/Design-Jam-Submission/index.html");
-        
+
         /* Check for repository */
         $ch1 = curl_init();
         curl_setopt_array($ch1, [
@@ -58,10 +58,10 @@
             CURLOPT_RETURNTRANSFER => 1
         ]);
         $json1 = curl_exec($ch1);
-        curl_close($ch1);    
+        curl_close($ch1);
         $jsa1 = json_decode($json1, true);
         if(isset($jsa1['message'])){
-            // throw exception if repo doesn't exist if "message" json obj exist 
+            // throw exception if repo doesn't exist if "message" json obj exist
             $e2 = false;
         }
         else{
@@ -109,7 +109,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Submission Page - Design Jam 1.0</title>
+    <title>Submission Page - Design Jam 2.0</title>
     <link rel="icon" type="image/png" sizes="600x600" href="assets/img/acm_sym_1s_flat_pos.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
@@ -118,12 +118,12 @@
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
-<title>Design Jam 1.0 - Home</title>
+<title>Design Jam 2.0 - Home</title>
 </head>
 
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
-        <div class="container"><a class="navbar-brand" href="#">Design Jam 1.0</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand" href="#">Design Jam 2.0</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://svce.acm.org/submission.html">Go Back</a></li>
@@ -169,7 +169,7 @@
                     <textarea name="status" class="form-control" style="height: 7em" readonly ><?php echo $status; ?></textarea>
                 </div>
                 <div class="form-group">
-                    <p style="margin-bottom: 6px;"><strong>Enter your registered Email Address (In Design Jam 1.0):                    
+                    <p style="margin-bottom: 6px;"><strong>Enter your registered Email Address (In Design Jam 2.0):
                     <input type="email" name="email" class="form-control" required/>
                 </div>
                 <div class="form-group">
