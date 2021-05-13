@@ -1,14 +1,7 @@
 <?php
-<<<<<<< Updated upstream
-$servername = "svcehost";
-$username = "root";
-$password = "";
-=======
 $servername = "localhost";
-$username = "svcehost_DJ2_0";
-$password = "Svceacm123";
->>>>>>> Stashed changes
 $dbname = "svcehost_DJ2.0";
+$password = "Svceacm123";
 $flag=true;
 $id = "\"".$_POST['gh_id']."\"";
 $name = "\"".$_POST['gh_fname']."\"";
