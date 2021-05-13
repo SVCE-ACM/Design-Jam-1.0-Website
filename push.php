@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "svcehost";
 $username = "root";
 $password = "";
 $dbname = "svcehost_dj2.0";
