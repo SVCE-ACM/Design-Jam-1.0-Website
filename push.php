@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "svcehost_DJ2.0";
+$dbname = "svcehost_dj2.0";
 $flag=true;
 $id = "\"".$_POST['gh_id']."\"";
 $name = "\"".$_POST['gh_fname']."\"";
