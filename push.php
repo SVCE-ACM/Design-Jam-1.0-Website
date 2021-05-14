@@ -1,7 +1,8 @@
 <?php
 $servername = "localhost";
-$dbname = "svcehost_DJ2.0";
+$username = "svcehost_DJ2_0";
 $password = "Svceacm123";
+$dbname = "svcehost_DJ2.0";
 $flag=true;
 $id = "\"".$_POST['gh_id']."\"";
 $name = "\"".$_POST['gh_fname']."\"";
@@ -14,11 +15,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-<<<<<<< Updated upstream
-$check_sql = "select count(1) as \"check\" from registration where email=".$email.";";
-=======
 $check_sql = "select count(1) as \"check\" from Participant_List where email=".$email.";";
->>>>>>> Stashed changes
 //$check_stmt = $conn->prepare($check_sql);
 //$check_stmt->execute();
 $result = $conn->query($check_sql);
@@ -32,7 +29,7 @@ if ($flag) {
     $submit_stmt = $conn->prepare($submit_sql);
     $submit_stmt->execute();
     $conn->close();
-    //header('Location: confirmation.html');
+    header('Location: confirmation.html');
 }
 else {
     // If user not registered
